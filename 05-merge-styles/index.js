@@ -6,8 +6,6 @@ async function bundle() {
   const stylesPath = path.join(__dirname, 'styles');
   const projctPath = path.join(__dirname, 'project-dist', 'bundle.css');
 
-  //добавить содержимое в bundle
-
   const files = await readdir(stylesPath, { withFileTypes:true });
   const output = fs.createWriteStream(projctPath);
 

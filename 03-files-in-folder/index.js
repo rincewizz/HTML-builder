@@ -25,7 +25,7 @@ async function getFileList(list){
 function getSize(filePath){
   return new Promise( (resolve) => {
     stat(filePath, (err, stats) => {
-      resolve(stats.size);
+      resolve(stats.size+'b');
     });
   }); 
 }

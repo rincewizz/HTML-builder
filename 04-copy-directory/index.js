@@ -15,8 +15,7 @@ async function copyDir(){
       }else{
         resolve(1);
       }
-    }); 
-
+    });
   });
  
   
@@ -24,7 +23,6 @@ async function copyDir(){
 
   const files = await readdir(filePath, { withFileTypes:true });
   for (const file of files) {
-    console.log(file.name);
     copyFile(path.join(filePath, file.name), path.join(fileCopyPath, file.name));
   }
     
